@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LITERACY-BRIDGE | Reading Level 1</title>
+<title>LITERACY-BRIDGE | Learn • Practice • Apply • Grow</title>
 
 <style>
 
@@ -177,6 +177,12 @@ nav button:hover {
 .lesson-view h2 {
   color: #14532d;
   margin-bottom: 15px;
+}
+
+.lesson-view h3 {
+  color: #14532d;
+  margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .example {
@@ -363,7 +369,9 @@ footer {
 </nav>
 
 
-<!-- HOME -->
+<!-- =========================
+     HOME
+========================= -->
 
 <div id="home" class="page">
 
@@ -412,17 +420,17 @@ Start Level 1
 
 <div class="card">
 
-<h3>✍️ Writing</h3>
+<h3>✍️ Writing Level 1</h3>
 
 <p>
-Writing lessons will help learners develop handwriting,
-spelling and sentence skills.
+Learn handwriting, letters, spelling, words, sentences,
+punctuation and paragraph writing.
 </p>
 
 <button class="lesson-button"
 onclick="showPage('writing')">
 
-Explore
+Start Writing
 
 </button>
 
@@ -471,7 +479,9 @@ Explore
 </div>
 
 
-<!-- READING -->
+<!-- =========================
+     READING
+========================= -->
 
 <div id="reading" class="page hidden">
 
@@ -711,59 +721,249 @@ class="lesson-view hidden">
 </div>
 
 
-<!-- WRITING -->
+<!-- =========================
+     WRITING LEVEL 1
+========================= -->
 
 <div id="writing" class="page hidden">
 
 <div class="container">
 
-<h2 class="section-title">✍️ Writing</h2>
+<h2 class="section-title">✍️ Writing Level 1</h2>
+
+
+<div class="progress-box">
+
+<h3>Writing Progress</h3>
+
+<p>
+<span id="writingProgressText">0</span>% complete
+</p>
+
+<div class="progress-bar">
+
+<div id="writingProgressFill"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
 
 <div class="cards">
 
-<div class="card">
 
-<h3>Handwriting</h3>
+<div class="card lesson-card" id="writingCard1">
+
+<div class="lesson-number">LESSON 1</div>
+
+<h3>✏️ Handwriting Basics</h3>
 
 <p>
-Practice forming letters clearly and correctly.
+Learn how to write clearly and neatly.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(1)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus1"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard2">
+
+<div class="lesson-number">LESSON 2</div>
+
+<h3>🔠 Capital & Small Letters</h3>
+
+<p>
+Learn when to use capital and small letters.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(2)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus2"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard3">
+
+<div class="lesson-number">LESSON 3</div>
+
+<h3>🖊️ Letter Formation</h3>
+
+<p>
+Practice forming letters correctly.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(3)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus3"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard4">
+
+<div class="lesson-number">LESSON 4</div>
+
+<h3>🔤 Building Words</h3>
+
+<p>
+Combine letters to create meaningful words.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(4)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus4"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard5">
+
+<div class="lesson-number">LESSON 5</div>
+
+<h3>📖 Spelling</h3>
+
+<p>
+Learn to spell common everyday words correctly.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(5)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus5"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard6">
+
+<div class="lesson-number">LESSON 6</div>
+
+<h3>💬 Making Sentences</h3>
+
+<p>
+Learn how to build meaningful sentences.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(6)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus6"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard7">
+
+<div class="lesson-number">LESSON 7</div>
+
+<h3>🔣 Punctuation</h3>
+
+<p>
+Learn how punctuation makes writing clear.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(7)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus7"></span>
+
+</div>
+
+
+<div class="card lesson-card" id="writingCard8">
+
+<div class="lesson-number">LESSON 8</div>
+
+<h3>📄 Paragraph Writing</h3>
+
+<p>
+Learn how to organize ideas into a paragraph.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingLesson(8)">
+
+Start Lesson
+
+</button>
+
+<span class="status" id="writingStatus8"></span>
+
+</div>
+
+
+</div>
+
+
+<div id="writingLesson"
+class="lesson-view hidden">
+</div>
+
+
+<div class="card" style="margin-top:30px;">
+
+<h3>🏆 Final Writing Quiz</h3>
+
+<p>
+Complete the eight writing lessons and test your knowledge
+with a 10-question quiz.
+</p>
+
+<button class="lesson-button"
+onclick="openWritingQuiz()">
+
+Start Writing Quiz
+
+</button>
+
+<p class="best-score">
+Best Score:
+<span id="writingBestScoreText">0/10</span>
 </p>
 
 </div>
 
 
-<div class="card">
-
-<h3>Spelling</h3>
-
-<p>
-Learn to spell common words.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Sentences</h3>
-
-<p>
-Practice constructing meaningful sentences.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Paragraphs</h3>
-
-<p>
-Learn how to organize ideas into paragraphs.
-</p>
-
-</div>
-
+<div id="writingQuiz"
+class="lesson-view hidden">
 </div>
 
 </div>
@@ -771,7 +971,9 @@ Learn how to organize ideas into paragraphs.
 </div>
 
 
-<!-- MATHEMATICS -->
+<!-- =========================
+     MATHEMATICS
+========================= -->
 
 <div id="math" class="page hidden">
 
@@ -853,7 +1055,9 @@ Learn about money, time and measurements.
 </div>
 
 
-<!-- PRACTICAL -->
+<!-- =========================
+     PRACTICAL SKILLS
+========================= -->
 
 <div id="practical" class="page hidden">
 
@@ -935,7 +1139,9 @@ Explore art, design and creativity.
 </div>
 
 
-<!-- PROGRESS -->
+<!-- =========================
+     PROGRESS
+========================= -->
 
 <div id="progress" class="page hidden">
 
@@ -946,7 +1152,7 @@ Explore art, design and creativity.
 
 <div class="progress-box">
 
-<h3>Reading Level 1</h3>
+<h3>📖 Reading Level 1</h3>
 
 <p>
 <span id="progressPageText">0</span>% completed
@@ -955,6 +1161,25 @@ Explore art, design and creativity.
 <div class="progress-bar">
 
 <div id="progressPageFill"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="progress-box">
+
+<h3>✍️ Writing Level 1</h3>
+
+<p>
+<span id="writingProgressPageText">0</span>% completed
+</p>
+
+<div class="progress-bar">
+
+<div id="writingProgressPageFill"
 class="progress-fill">
 </div>
 
@@ -991,7 +1216,7 @@ practice what you learn and check your progress regularly.
 <script>
 
 /* =========================
-   SAVED PROGRESS
+   SAVED READING PROGRESS
 ========================= */
 
 let completed =
@@ -1002,6 +1227,21 @@ localStorage.getItem("literacyBridgeCompleted")
 let quizBestScore =
 Number(
 localStorage.getItem("literacyBridgeBestScore")
+) || 0;
+
+
+/* =========================
+   SAVED WRITING PROGRESS
+========================= */
+
+let writingCompleted =
+JSON.parse(
+localStorage.getItem("literacyBridgeWritingCompleted")
+) || [];
+
+let writingBestScore =
+Number(
+localStorage.getItem("literacyBridgeWritingBestScore")
 ) || 0;
 
 
@@ -1393,7 +1633,7 @@ A book
 
 
 /* =========================
-   OPEN LESSON
+   OPEN READING LESSON
 ========================= */
 
 function openReadingLesson(number) {
@@ -1428,7 +1668,7 @@ block: "start"
 
 
 /* =========================
-   LESSON PRACTICE
+   READING PRACTICE
 ========================= */
 
 function lessonAnswer(button,correct) {
@@ -1452,7 +1692,7 @@ feedback.innerText =
 
 
 /* =========================
-   COMPLETE LESSON
+   COMPLETE READING LESSON
 ========================= */
 
 function completeLesson(number) {
@@ -1479,14 +1719,14 @@ document.getElementById(
 updateProgress();
 
 alert(
-"Lesson completed! Keep going. 🌟"
+"Reading lesson completed! Keep going. 🌟"
 );
 
 }
 
 
 /* =========================
-   UPDATE PROGRESS
+   UPDATE READING PROGRESS
 ========================= */
 
 function updateProgress() {
@@ -1528,7 +1768,7 @@ quizBestScore + "/10";
 
 
 /* =========================
-   QUIZ QUESTIONS
+   READING QUIZ QUESTIONS
 ========================= */
 
 const quizQuestions = [
@@ -1660,7 +1900,7 @@ let quizAnswers = [];
 
 
 /* =========================
-   OPEN FINAL QUIZ
+   OPEN READING QUIZ
 ========================= */
 
 function openFinalQuiz() {
@@ -1759,7 +1999,7 @@ block: "start"
 
 
 /* =========================
-   SELECT QUIZ ANSWER
+   SELECT READING QUIZ ANSWER
 ========================= */
 
 function selectQuizAnswer(
@@ -1788,7 +2028,7 @@ button.style.background =
 
 
 /* =========================
-   FINISH QUIZ
+   FINISH READING QUIZ
 ========================= */
 
 function finishQuiz() {
@@ -1848,8 +2088,6 @@ feedback.innerText =
 let percentage =
 score * 10;
 
-
-/* SAVE BEST SCORE */
 
 if(score > quizBestScore) {
 
@@ -1972,11 +2210,1069 @@ behavior: "smooth"
 }
 
 
+/* =====================================================
+   WRITING LESSONS
+===================================================== */
+
+const writingLessons = {
+
+1: {
+
+title: "Lesson 1: Handwriting Basics",
+
+content: `
+
+<p>
+Good handwriting is clear, readable and properly spaced.
+When writing, sit comfortably, hold your writing tool properly
+and keep your letters at a similar size.
+</p>
+
+<div class="example">
+
+<strong>Good writing habits:</strong><br><br>
+
+• Sit upright and comfortably.<br>
+• Hold the pen or pencil correctly.<br>
+• Leave spaces between words.<br>
+• Keep letters on the writing line.<br>
+• Write slowly enough to remain clear.
+
+</div>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which habit helps make handwriting easier to read?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+Leaving spaces between words
+</button>
+
+<button onclick="writingAnswer(this,false)">
+Writing every word without spaces
+</button>
+
+<button onclick="writingAnswer(this,false)">
+Making every letter extremely large
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+2: {
+
+title: "Lesson 2: Capital and Small Letters",
+
+content: `
+
+<p>
+English letters have capital forms and small forms.
+Capital letters are also called uppercase letters.
+Small letters are also called lowercase letters.
+</p>
+
+<div class="example big-letters">
+
+A a &nbsp; B b &nbsp; C c &nbsp; D d &nbsp; E e
+
+</div>
+
+<h3>When do we use capital letters?</h3>
+
+<p>
+We use capital letters at the beginning of sentences
+and for proper names such as people and places.
+</p>
+
+<div class="example">
+
+<strong>Correct:</strong> John lives in Uganda.<br><br>
+
+<strong>Incorrect:</strong> john lives in uganda.
+
+</div>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which sentence uses capital letters correctly?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+Mary lives in Uganda.
+</button>
+
+<button onclick="writingAnswer(this,false)">
+mary lives in uganda.
+</button>
+
+<button onclick="writingAnswer(this,false)">
+MARY lives in uganda.
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+3: {
+
+title: "Lesson 3: Letter Formation",
+
+content: `
+
+<p>
+Letter formation means writing letters using the correct
+shape and order of strokes.
+</p>
+
+<div class="example big-letters">
+
+A a &nbsp; B b &nbsp; C c &nbsp; D d<br><br>
+
+E e &nbsp; F f &nbsp; G g &nbsp; H h
+
+</div>
+
+<p>
+Practising the same letters repeatedly can help improve
+control and consistency.
+</p>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which pair shows a capital letter followed by its small letter?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+B b
+</button>
+
+<button onclick="writingAnswer(this,false)">
+b C
+</button>
+
+<button onclick="writingAnswer(this,false)">
+D E
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+4: {
+
+title: "Lesson 4: Building Words",
+
+content: `
+
+<p>
+Words are made by putting letters together in the correct
+order. Changing the order of letters can create a different
+word or a word that has no meaning.
+</p>
+
+<div class="example">
+
+C + A + T = <strong>CAT</strong><br><br>
+
+B + O + X = <strong>BOX</strong><br><br>
+
+S + U + N = <strong>SUN</strong>
+
+</div>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which word can be made from S + U + N?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+SUN
+</button>
+
+<button onclick="writingAnswer(this,false)">
+SNU
+</button>
+
+<button onclick="writingAnswer(this,false)">
+UNS
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+5: {
+
+title: "Lesson 5: Spelling",
+
+content: `
+
+<p>
+Spelling means writing the letters of a word in the correct
+order. Good spelling helps other people understand your writing.
+</p>
+
+<div class="example">
+
+<strong>Examples:</strong><br><br>
+
+school<br>
+friend<br>
+water<br>
+house<br>
+teacher
+
+</div>
+
+<h3>Spelling Strategy</h3>
+
+<p>
+Look at the word, say the word, divide it into parts if helpful,
+then write the letters carefully.
+</p>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which spelling is correct?
+</p>
+
+<button onclick="writingAnswer(this,false)">
+skool
+</button>
+
+<button onclick="writingAnswer(this,true)">
+school
+</button>
+
+<button onclick="writingAnswer(this,false)">
+scool
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+6: {
+
+title: "Lesson 6: Making Sentences",
+
+content: `
+
+<p>
+A sentence is a group of words that expresses a complete idea.
+A basic sentence normally has words arranged in a meaningful order.
+</p>
+
+<div class="example">
+
+<strong>The boy plays football.</strong><br><br>
+
+<strong>Sarah reads a book.</strong><br><br>
+
+<strong>The sun is bright.</strong>
+
+</div>
+
+<h3>Remember</h3>
+
+<p>
+A sentence usually begins with a capital letter and ends
+with suitable punctuation.
+</p>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which group of words forms a correct sentence?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+The girl is reading.
+</button>
+
+<button onclick="writingAnswer(this,false)">
+girl reading the
+</button>
+
+<button onclick="writingAnswer(this,false)">
+reading is girl The
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+7: {
+
+title: "Lesson 7: Punctuation",
+
+content: `
+
+<p>
+Punctuation marks help readers understand writing.
+Different marks have different purposes.
+</p>
+
+<div class="example">
+
+<strong>Full stop (.)</strong> → ends a statement.<br><br>
+
+<strong>Question mark (?)</strong> → ends a question.<br><br>
+
+<strong>Exclamation mark (!)</strong> → shows strong feeling.
+
+</div>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which punctuation mark should end this question?
+</p>
+
+<p>
+<strong>Where do you live ___</strong>
+</p>
+
+<button onclick="writingAnswer(this,false)">
+.
+</button>
+
+<button onclick="writingAnswer(this,true)">
+?
+</button>
+
+<button onclick="writingAnswer(this,false)">
+!
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+},
+
+
+8: {
+
+title: "Lesson 8: Paragraph Writing",
+
+content: `
+
+<p>
+A paragraph is a group of related sentences about one main idea.
+A good paragraph normally has a clear topic and supporting details.
+</p>
+
+<div class="example">
+
+<strong>Example paragraph:</strong><br><br>
+
+My school is a place where I learn many useful things.
+I study different subjects and work with other learners.
+I also take part in sports and practical activities.
+My school helps me develop knowledge and skills.
+
+</div>
+
+<h3>Paragraph Structure</h3>
+
+<p>
+<strong>1. Topic sentence:</strong> introduces the main idea.<br>
+<strong>2. Supporting sentences:</strong> give details.<br>
+<strong>3. Closing sentence:</strong> brings the idea together.
+</p>
+
+<div class="activity">
+
+<strong>Practice:</strong>
+
+<p>
+Which sentence would be a good topic sentence
+for a paragraph about school?
+</p>
+
+<button onclick="writingAnswer(this,true)">
+My school helps me learn many useful things.
+</button>
+
+<button onclick="writingAnswer(this,false)">
+The blue pen is on the table.
+</button>
+
+<button onclick="writingAnswer(this,false)">
+I ate a banana yesterday.
+</button>
+
+<div class="feedback"></div>
+
+</div>
+
+`
+
+}
+
+};
+
+
+/* =========================
+   OPEN WRITING LESSON
+========================= */
+
+function openWritingLesson(number) {
+
+let area =
+document.getElementById("writingLesson");
+
+area.classList.remove("hidden");
+
+area.innerHTML = `
+
+<h2>${writingLessons[number].title}</h2>
+
+${writingLessons[number].content}
+
+<button
+class="complete-button"
+onclick="completeWritingLesson(${number})">
+
+✅ Mark Writing Lesson Complete
+
+</button>
+
+`;
+
+area.scrollIntoView({
+behavior: "smooth",
+block: "start"
+});
+
+}
+
+
+/* =========================
+   WRITING PRACTICE
+========================= */
+
+function writingAnswer(button,correct) {
+
+let feedback =
+button.parentElement.querySelector(".feedback");
+
+if(correct) {
+
+feedback.innerText =
+"✅ Correct! Excellent work.";
+
+} else {
+
+feedback.innerText =
+"❌ Not quite. Try again.";
+
+}
+
+}
+
+
+/* =========================
+   COMPLETE WRITING LESSON
+========================= */
+
+function completeWritingLesson(number) {
+
+if(!writingCompleted.includes(number)) {
+
+writingCompleted.push(number);
+
+localStorage.setItem(
+"literacyBridgeWritingCompleted",
+JSON.stringify(writingCompleted)
+);
+
+}
+
+document.getElementById(
+"writingStatus" + number
+).innerText = "✅ Completed";
+
+document.getElementById(
+"writingCard" + number
+).classList.add("completed");
+
+updateWritingProgress();
+
+alert(
+"Writing lesson completed! Keep going. ✍️🌟"
+);
+
+}
+
+
+/* =========================
+   UPDATE WRITING PROGRESS
+========================= */
+
+function updateWritingProgress() {
+
+let percentage =
+Math.round(
+(writingCompleted.length / 8) * 100
+);
+
+
+document.getElementById(
+"writingProgressText"
+).innerText = percentage;
+
+
+document.getElementById(
+"writingProgressFill"
+).style.width =
+percentage + "%";
+
+
+document.getElementById(
+"writingProgressPageText"
+).innerText = percentage;
+
+
+document.getElementById(
+"writingProgressPageFill"
+).style.width =
+percentage + "%";
+
+
+document.getElementById(
+"writingBestScoreText"
+).innerText =
+writingBestScore + "/10";
+
+}
+
+
+/* =========================
+   WRITING QUIZ
+========================= */
+
+const writingQuizQuestions = [
+
+{
+question:
+"Which habit helps make handwriting easier to read?",
+
+options:
+[
+"Leaving spaces between words",
+"Writing without spaces",
+"Making every letter huge",
+"Writing over other words"
+],
+
+answer: 0
+},
+
+{
+question:
+"Which sentence uses capital letters correctly?",
+
+options:
+[
+"mary lives in uganda.",
+"Mary lives in Uganda.",
+"MARY lives in uganda.",
+"mary Lives In Uganda."
+],
+
+answer: 1
+},
+
+{
+question:
+"Which pair shows a capital letter followed by its small letter?",
+
+options:
+[
+"b C",
+"B b",
+"D E",
+"a B"
+],
+
+answer: 1
+},
+
+{
+question:
+"Which word can be made from S + U + N?",
+
+options:
+[
+"SNU",
+"UNS",
+"SUN",
+"NUS"
+],
+
+answer: 2
+},
+
+{
+question:
+"Which spelling is correct?",
+
+options:
+[
+"skool",
+"scool",
+"school",
+"shcool"
+],
+
+answer: 2
+},
+
+{
+question:
+"Which group of words forms a correct sentence?",
+
+options:
+[
+"girl reading the",
+"The girl is reading.",
+"reading is girl",
+"girl The reading"
+],
+
+answer: 1
+},
+
+{
+question:
+"Which punctuation mark normally ends a question?",
+
+options:
+[
+".",
+"!",
+"?",
+","
+],
+
+answer: 2
+},
+
+{
+question:
+"What is a paragraph?",
+
+options:
+[
+"A single letter",
+"A group of related sentences",
+"One punctuation mark",
+"A single number"
+],
+
+answer: 1
+},
+
+{
+question:
+"Which is a good topic sentence for a paragraph about school?",
+
+options:
+[
+"The blue pen is on the table.",
+"My school helps me learn many useful things.",
+"I ate a banana yesterday.",
+"The weather is cloudy."
+],
+
+answer: 1
+},
+
+{
+question:
+"Why is good spelling important?",
+
+options:
+[
+"It helps readers understand your writing.",
+"It makes paper heavier.",
+"It removes all punctuation.",
+"It makes every sentence longer."
+],
+
+answer: 0
+}
+
+];
+
+
+let writingQuizAnswers = [];
+
+
+/* =========================
+   OPEN WRITING QUIZ
+========================= */
+
+function openWritingQuiz() {
+
+writingQuizAnswers = [];
+
+let area =
+document.getElementById("writingQuiz");
+
+area.classList.remove("hidden");
+
+let html = `
+
+<h2>🏆 Writing Level 1 Final Quiz</h2>
+
+<p>
+Answer all 10 questions.
+Your score will appear at the end.
+</p>
+
+`;
+
+writingQuizQuestions.forEach(
+function(q,index) {
+
+html += `
+
+<div class="quiz-question">
+
+<h3>
+${index + 1}. ${q.question}
+</h3>
+
+`;
+
+q.options.forEach(
+function(option,optionIndex) {
+
+html += `
+
+<button
+class="quiz-option"
+onclick="
+selectWritingQuizAnswer(
+${index},
+${optionIndex},
+this
+)
+">
+
+${option}
+
+</button>
+
+`;
+
+});
+
+
+html += `
+
+<div
+id="writingQuizFeedback${index}"
+class="feedback">
+</div>
+
+</div>
+
+`;
+
+});
+
+
+html += `
+
+<button
+class="main-button"
+onclick="finishWritingQuiz()">
+
+Submit Writing Quiz
+
+</button>
+
+<div id="writingQuizResult"></div>
+
+`;
+
+area.innerHTML = html;
+
+area.scrollIntoView({
+behavior: "smooth",
+block: "start"
+});
+
+}
+
+
+/* =========================
+   SELECT WRITING QUIZ ANSWER
+========================= */
+
+function selectWritingQuizAnswer(
+question,
+answer,
+button
+) {
+
+writingQuizAnswers[question] = answer;
+
+let buttons =
+button.parentElement
+.querySelectorAll(".quiz-option");
+
+buttons.forEach(
+function(b) {
+
+b.style.background = "white";
+
+});
+
+button.style.background =
+"#e8f5e9";
+
+}
+
+
+/* =========================
+   FINISH WRITING QUIZ
+========================= */
+
+function finishWritingQuiz() {
+
+let answered =
+writingQuizAnswers.filter(
+function(answer) {
+
+return answer !== undefined;
+
+}
+).length;
+
+
+if(answered < writingQuizQuestions.length) {
+
+alert(
+"Please answer all 10 questions before submitting."
+);
+
+return;
+
+}
+
+
+let score = 0;
+
+
+writingQuizQuestions.forEach(
+function(q,index) {
+
+let feedback =
+document.getElementById(
+"writingQuizFeedback" + index
+);
+
+
+if(
+writingQuizAnswers[index] === q.answer
+) {
+
+score++;
+
+feedback.innerText =
+"✅ Correct";
+
+} else {
+
+feedback.innerText =
+"❌ Incorrect";
+
+}
+
+});
+
+
+let percentage =
+score * 10;
+
+
+if(score > writingBestScore) {
+
+writingBestScore = score;
+
+localStorage.setItem(
+"literacyBridgeWritingBestScore",
+writingBestScore
+);
+
+}
+
+
+document.getElementById(
+"writingBestScoreText"
+).innerText =
+writingBestScore + "/10";
+
+
+let result =
+document.getElementById(
+"writingQuizResult"
+);
+
+
+if(score >= 7) {
+
+result.innerHTML = `
+
+<div class="score-box">
+
+<h2>🎉 Congratulations!</h2>
+
+<p>
+
+You scored
+<strong>${score}/10</strong>
+(${percentage}%).
+
+</p>
+
+<p>
+You have completed the Writing Level 1 final quiz.
+</p>
+
+
+<div class="certificate">
+
+<h2>🏆 LITERACY-BRIDGE</h2>
+
+<p>
+Certificate of Completion
+</p>
+
+<br>
+
+<p>
+This learner has completed
+<strong>Writing Level 1</strong>.
+</p>
+
+<br>
+
+<p>
+Score:
+<strong>${score}/10</strong>
+</p>
+
+</div>
+
+</div>
+
+`;
+
+} else {
+
+result.innerHTML = `
+
+<div class="score-box">
+
+<h2>📚 Keep Practicing!</h2>
+
+<p>
+
+You scored
+<strong>${score}/10</strong>
+(${percentage}%).
+
+</p>
+
+<p>
+Review the writing lessons and try the quiz again.
+</p>
+
+</div>
+
+`;
+
+}
+
+
+window.scrollTo({
+
+top: document.body.scrollHeight,
+
+behavior: "smooth"
+
+});
+
+}
+
+
 /* =========================
    LOAD SAVED PROGRESS
 ========================= */
 
 function loadSavedProgress() {
+
+
+/* READING */
 
 completed.forEach(
 function(number) {
@@ -2011,7 +3307,44 @@ card.classList.add(
 });
 
 
+/* WRITING */
+
+writingCompleted.forEach(
+function(number) {
+
+let status =
+document.getElementById(
+"writingStatus" + number
+);
+
+let card =
+document.getElementById(
+"writingCard" + number
+);
+
+
+if(status) {
+
+status.innerText =
+"✅ Completed";
+
+}
+
+
+if(card) {
+
+card.classList.add(
+"completed"
+);
+
+}
+
+});
+
+
 updateProgress();
+
+updateWritingProgress();
 
 }
 
