@@ -1,181 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Literacy Bridge Learning Centre</title>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>LITERACY-BRIDGE | Learn, Practice, Grow</title>
+
 <style>
-:root{--green:#176b3a;--light:#eef7ef;--dark:#12351f;--gold:#e5a92d;--text:#18321f}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f8f5;color:var(--text)}
-header{background:var(--green);color:white;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;box-shadow:0 3px 14px #0002}.brand{font-weight:900;font-size:1.35rem}nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-weight:700}
-.hero{padding:70px 6%;background:linear-gradient(135deg,#dff3e2,#fff);text-align:center}.hero h1{font-size:clamp(2.2rem,6vw,4.5rem);margin:0 0 10px}.hero p{max-width:800px;margin:0 auto 25px;line-height:1.7;font-size:1.1rem}
-.btn{border:0;border-radius:11px;padding:12px 18px;background:var(--green);color:#fff;font-weight:800;cursor:pointer}.btn.alt{background:white;color:var(--green);border:1px solid #cbdccc}.btn.gold{background:var(--gold);color:#222}
-.section{padding:55px 5%;max-width:1250px;margin:auto}.section>h2{text-align:center;font-size:2.2rem;margin:0 0 10px}.intro{text-align:center;max-width:780px;margin:0 auto 28px;line-height:1.6}
-.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}.course{background:white;border-radius:20px;padding:24px;box-shadow:0 6px 22px #0001;border-top:7px solid var(--green)}.course .emoji{font-size:3rem}.course h3{font-size:1.45rem;margin:8px 0}.course p{line-height:1.55}.course ul{padding-left:20px;line-height:1.8}.course .meta{font-size:.9rem;color:#55705c;margin:12px 0}
-.dashboard{display:grid;grid-template-columns:250px 1fr;gap:20px}.side,.lesson-panel,.quiz,.box{background:white;border-radius:18px;padding:20px;box-shadow:0 5px 18px #0001}.side button{width:100%;text-align:left;margin:5px 0;background:#edf5ee;color:var(--dark)}.side button.active{background:var(--green);color:white}.lesson-panel h3{margin-top:0}.lesson-item{border:1px solid #d8e5d9;border-radius:12px;margin:10px 0;padding:13px}.lesson-item strong{display:block;margin-bottom:5px}.status{float:right;font-size:.8rem;padding:4px 7px;border-radius:20px;background:#edf5ee}.progress{height:11px;background:#dfe9e0;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:var(--green);width:0;transition:.4s}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.activity{background:#f0f8f1;border-left:5px solid var(--green);padding:15px;border-radius:10px;margin-top:15px}.answer{display:block;width:100%;text-align:left;border:1px solid #d0ddd2;background:white;padding:12px;border-radius:10px;margin:8px 0;cursor:pointer}.answer:hover{background:#eef7ef}
-footer{background:var(--dark);color:white;text-align:center;padding:30px;margin-top:30px}.small{font-size:.9rem;color:#58705e}
-@media(max-width:800px){.dashboard,.two{grid-template-columns:1fr}header{position:static}}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f8f4;
+        color: #18351f;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #14532d;
+        color: white;
+        padding: 25px 8%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 38px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav {
+        background: #0f3d22;
+        padding: 12px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .hero {
+        padding: 60px 8%;
+        text-align: center;
+        background: white;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        max-width: 750px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 13px 25px;
+        background: #198754;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 50px 8%;
+    }
+
+    section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 22px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+        color: #14532d;
+    }
+
+    .card ul {
+        padding-left: 20px;
+    }
+
+    .lesson {
+        background: #e8f5e9;
+        border-left: 5px solid #198754;
+    }
+
+    footer {
+        background: #0f3d22;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 30px;
+        }
+
+        nav a {
+            display: block;
+            margin: 7px;
+        }
+    }
 </style>
+
 </head>
+
 <body>
-<header>
- <div class="brand">🌱 Literacy Bridge</div>
- <nav><a href="#courses">Courses</a><a href="#centre">Learning Centre</a><a href="#practice">Practice</a><a href="#about">About</a></nav>
-</header>
 
-<section class="hero">
- <h1>Literacy Bridge</h1>
- <p>A structured learning centre for people building foundational literacy, numeracy and practical life skills. Learn step by step, practise, listen and track progress.</p>
- <button class="btn" onclick="document.getElementById('courses').scrollIntoView()">Start Learning</button>
+<header> <h1>LITERACY-BRIDGE</h1> <p>Learn • Practice • Create • Grow</p> </header>
+
+<nav> <a href="#reading">Reading</a> <a href="#writing">Writing</a> <a href="#math">Mathematics</a> <a href="#practical">Practical Skills</a> <a href="#lessons">Lessons</a> </nav>
+
+<div class="hero"> <h2>Welcome to LITERACY-BRIDGE</h2> <p> A learning platform designed to help learners develop literacy, numeracy and practical skills through simple lessons, activities and practice. </p> <a class="button" href="#lessons">Start Learning</a> </div>
+
+<section id="reading"> <h2>📖 Learn How to Read</h2>
+
+<div class="cards">
+
+    <div class="card lesson">
+        <h3>Lesson 1: Letters</h3>
+        <p>Learn the alphabet from A to Z and identify capital and small letters.</p>
+        <ul>
+            <li>Recognize letters</li>
+            <li>Say letter sounds</li>
+            <li>Match letters with words</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 2: Sounds</h3>
+        <p>Learn how letters combine to create sounds.</p>
+        <ul>
+            <li>Vowel sounds</li>
+            <li>Consonant sounds</li>
+            <li>Simple syllables</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 3: Words</h3>
+        <p>Build simple words from letters and sounds.</p>
+        <ul>
+            <li>Two-letter words</li>
+            <li>Three-letter words</li>
+            <li>Common everyday words</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 4: Sentences</h3>
+        <p>Learn how words form meaningful sentences.</p>
+        <ul>
+            <li>Capital letters</li>
+            <li>Full stops</li>
+            <li>Reading short sentences</li>
+        </ul>
+    </div>
+
+</div>
+
 </section>
 
-<section class="section" id="courses">
- <h2>Choose Your Learning Section</h2>
- <p class="intro">Each course is divided into levels. Learners can begin with the basics and move forward after practising each skill.</p>
- <div class="course-grid">
-  <article class="course">
-   <div class="emoji">✍️</div><h3>Learn How to Write</h3>
-   <p>Develop handwriting, spelling and everyday writing from beginner level.</p>
-   <div class="meta">4 levels • 16 core lessons</div>
-   <ul><li>Level 1: Hand control & shapes</li><li>Level 2: Letters & sounds</li><li>Level 3: Words & sentences</li><li>Level 4: Everyday writing</li></ul>
-   <button class="btn" onclick="openCourse('writing')">Open Writing Course</button>
-  </article>
-  <article class="course">
-   <div class="emoji">📖</div><h3>Learn How to Read</h3>
-   <p>Move from recognising letters to understanding short texts.</p>
-   <div class="meta">4 levels • 16 core lessons</div>
-   <ul><li>Level 1: Alphabet recognition</li><li>Level 2: Phonics & blending</li><li>Level 3: Words & sentences</li><li>Level 4: Stories & comprehension</li></ul>
-   <button class="btn" onclick="openCourse('reading')">Open Reading Course</button>
-  </article>
-  <article class="course">
-   <div class="emoji">🔢</div><h3>Basic Mathematics</h3>
-   <p>Build useful number skills for school, work and daily life.</p>
-   <div class="meta">4 levels • 16 core lessons</div>
-   <ul><li>Level 1: Numbers & counting</li><li>Level 2: Operations</li><li>Level 3: Money & measurement</li><li>Level 4: Everyday problem solving</li></ul>
-   <button class="btn" onclick="openCourse('math')">Open Mathematics Course</button>
-  </article>
-  <article class="course">
-   <div class="emoji">🌾</div><h3>Practical Skills</h3>
-   <p>Learn useful knowledge for health, home, farming, work and community life.</p>
-   <div class="meta">4 levels • 16 core lessons</div>
-   <ul><li>Level 1: Personal care & safety</li><li>Level 2: Home & environment</li><li>Level 3: Money & enterprise</li><li>Level 4: Digital & communication skills</li></ul>
-   <button class="btn" onclick="openCourse('practical')">Open Practical Skills</button>
-  </article>
- </div>
+<section id="writing"> <h2>✍️ Learn How to Write</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Lesson 1: Handwriting</h3>
+        <p>Practice forming letters clearly and correctly.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 2: Words</h3>
+        <p>Learn to spell and write common words.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 3: Sentences</h3>
+        <p>Practice constructing clear and meaningful sentences.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lesson 4: Paragraphs</h3>
+        <p>Learn how to organize ideas into paragraphs.</p>
+    </div>
+
+</div>
+
 </section>
 
-<section class="section" id="centre">
- <h2>Learning Centre</h2>
- <p class="intro">Select a subject, open a lesson, listen to it, practise the activity, then mark it complete.</p>
- <div class="dashboard">
-  <aside class="side">
-   <h3>Subjects</h3>
-   <button class="btn active" id="b-writing" onclick="openCourse('writing')">✍️ Writing</button>
-   <button class="btn" id="b-reading" onclick="openCourse('reading')">📖 Reading</button>
-   <button class="btn" id="b-math" onclick="openCourse('math')">🔢 Mathematics</button>
-   <button class="btn" id="b-practical" onclick="openCourse('practical')">🌾 Practical Skills</button>
-  </aside>
-  <main class="lesson-panel">
-   <h3 id="courseTitle">Writing: Level 1</h3>
-   <p id="courseDescription">Start with control, shapes and letter formation.</p>
-   <div class="progress"><span id="courseProgress"></span></div>
-   <p class="small" id="courseCount">0 of 16 lessons completed</p>
-   <div id="lessonList"></div>
-  </main>
- </div>
+<section id="math"> <h2>🔢 Basic Mathematics</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Numbers</h3>
+        <p>Learn number recognition, counting and place value.</p>
+    </div>
+
+    <div class="card">
+        <h3>Addition</h3>
+        <p>Learn how to combine numbers and solve addition problems.</p>
+    </div>
+
+    <div class="card">
+        <h3>Subtraction</h3>
+        <p>Learn how to find the difference between numbers.</p>
+    </div>
+
+    <div class="card">
+        <h3>Multiplication</h3>
+        <p>Practice multiplication tables and simple problems.</p>
+    </div>
+
+    <div class="card">
+        <h3>Division</h3>
+        <p>Understand sharing and division using simple examples.</p>
+    </div>
+
+    <div class="card">
+        <h3>Everyday Mathematics</h3>
+        <p>Apply mathematics to money, time, measurements and daily activities.</p>
+    </div>
+
+</div>
+
 </section>
 
-<section class="section" id="practice">
- <h2>Practice Zone</h2>
- <div class="two">
-  <div class="quiz">
-   <h3>🔢 Quick Mathematics Check</h3>
-   <p>If you have 12 shillings and spend 5 shillings, how much remains?</p>
-   <button class="answer" onclick="check(this,false)">5 shillings</button>
-   <button class="answer" onclick="check(this,true)">7 shillings</button>
-   <button class="answer" onclick="check(this,false)">8 shillings</button>
-   <p id="mathResult"></p>
-  </div>
-  <div class="quiz">
-   <h3>📖 Reading Practice</h3>
-   <p><strong>Read:</strong> “The farmer plants seeds in the soil.”</p>
-   <p>What is the farmer planting?</p>
-   <button class="answer" onclick="readAnswer(true)">Seeds</button>
-   <button class="answer" onclick="readAnswer(false)">Books</button>
-   <button class="answer" onclick="readAnswer(false)">Shoes</button>
-   <p id="readResult"></p>
-  </div>
- </div>
+<section id="practical"> <h2>🛠️ Practical Skills</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Communication</h3>
+        <p>Develop speaking, listening and teamwork skills.</p>
+    </div>
+
+    <div class="card">
+        <h3>Digital Skills</h3>
+        <p>Learn basic computer, phone and internet skills.</p>
+    </div>
+
+    <div class="card">
+        <h3>Problem Solving</h3>
+        <p>Learn how to identify problems and develop useful solutions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Entrepreneurship</h3>
+        <p>Learn basic business ideas, planning, saving and responsible money management.</p>
+    </div>
+
+    <div class="card">
+        <h3>Environmental Skills</h3>
+        <p>Learn practical ways to care for soil, water, plants and the environment.</p>
+    </div>
+
+    <div class="card">
+        <h3>Creative Skills</h3>
+        <p>Explore art, design, making, creativity and practical projects.</p>
+    </div>
+
+</div>
+
 </section>
 
-<section class="section" id="about">
- <h2>How the Programme Works</h2>
- <div class="two">
-  <div class="box"><h3>1. Learn</h3><p>Short explanations introduce one skill at a time.</p><h3>2. Listen</h3><p>Audio support can read lesson instructions aloud.</p></div>
-  <div class="box"><h3>3. Practise</h3><p>Activities let learners use the new skill.</p><h3>4. Check & Progress</h3><p>Quizzes and completed lessons show what has been learned.</p></div>
- </div>
- <div class="box" style="margin-top:20px"><h3>Future expansion</h3><p>Teacher accounts, learner profiles, certificates, local-language audio, downloadable lessons, pictures, offline lessons, more quizzes and community learning centres can be added later.</p></div>
+<section id="lessons"> <h2>📚 Learning Method</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>1. Learn</h3>
+        <p>Read or watch a simple explanation of the topic.</p>
+    </div>
+
+    <div class="card">
+        <h3>2. Practice</h3>
+        <p>Complete activities that help you understand the lesson.</p>
+    </div>
+
+    <div class="card">
+        <h3>3. Apply</h3>
+        <p>Use the new knowledge in real-life situations.</p>
+    </div>
+
+    <div class="card">
+        <h3>4. Check</h3>
+        <p>Complete exercises to see what you have understood.</p>
+    </div>
+
+</div>
+
 </section>
 
-<footer><strong>🌱 Literacy Bridge</strong><br>Learn today. Build tomorrow.</footer>
+<footer> <p>© 2026 LITERACY-BRIDGE</p> <p>Building knowledge, skills and confidence.</p> </footer>
 
-<script>
-const data={
-writing:{
-title:'Writing Course',desc:'Build writing ability from hand control to useful everyday communication.',
-levels:[
-['Level 1: Foundations',['Hand control and pencil grip','Lines, curves and shapes','Tracing patterns','Writing numbers 0–9']],
-['Level 2: Letters',['Capital letters A–Z','Small letters a–z','Vowels and consonants','Letter formation and spacing']],
-['Level 3: Words & Sentences',['Joining letters into syllables','Spelling simple words','Building short sentences','Capital letters and full stops']],
-['Level 4: Everyday Writing',['Writing your name and address','Writing a short note','Filling a simple form','Writing a short personal paragraph']]]
-},
-reading:{
-title:'Reading Course',desc:'Learn sounds, words, sentences and comprehension step by step.',
-levels:[
-['Level 1: Alphabet',['Recognising A–Z','Matching letters and sounds','Vowels and consonants','Reading simple letter patterns']],
-['Level 2: Phonics',['Blending sounds','Breaking words into sounds','Reading syllables','Reading common words']],
-['Level 3: Sentences',['Reading short sentences','Punctuation clues','Reading short paragraphs','Finding key information']],
-['Level 4: Understanding',['Short stories','Main idea','Answering questions','Following written instructions']]]
-},
-math:{
-title:'Basic Mathematics Course',desc:'Learn number skills that are useful in school, work and everyday life.',
-levels:[
-['Level 1: Numbers',['Recognising 0–10','Counting objects','Numbers 11–100','Place value']],
-['Level 2: Operations',['Addition','Subtraction','Multiplication','Division']],
-['Level 3: Everyday Numbers',['Money and change','Time and calendars','Length, weight and capacity','Simple fractions']],
-['Level 4: Problem Solving',['Two-step problems','Shopping calculations','Simple budgeting','Checking whether an answer makes sense']]]
-},
-practical:{
-title:'Practical Skills Course',desc:'Build knowledge for healthy, safe and productive everyday living.',
-levels:[
-['Level 1: Personal Wellbeing',['Handwashing and hygiene','Clean water and sanitation','Basic personal safety','Healthy daily habits']],
-['Level 2: Home & Environment',['Safe food handling','Household cleanliness','Waste management','Soil and environmental care']],
-['Level 3: Work & Money',['Needs and wants','Saving and budgeting','Small business basics','Customer communication']],
-['Level 4: Community & Digital',['Teamwork and communication','Finding reliable information','Safe mobile-phone use','Community problem solving']]]
-]};
-let current='writing',done={writing:[],reading:[],math:[],practical:[]};
-function speak(t){if(!('speechSynthesis'in window)){alert('Voice reading is not supported in this browser.');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.rate=.82;speechSynthesis.speak(u)}
-function openCourse(key){
- current=key;
- ['writing','reading','math','practical'].forEach(x=>document.getElementById('b-'+x).classList.toggle('active',x===key));
- const c=data[key];document.getElementById('courseTitle').innerText=c.title;document.getElementById('courseDescription').innerText=c.desc;
- let list=document.getElementById('lessonList'),n=0,all=[];
- c.levels.forEach(l=>{l[1].forEach(x=>all.push({level:l[0],name:x,index:n++}))});
- list.innerHTML=all.map(x=>`<div class="lesson-item"><span class="status" id="s-${key}-${x.index}">${done[key].includes(x.index)?'✓ Complete':'Not started'}</span><strong>${x.level}</strong>${x.name}<br><br><button class="btn alt" onclick="speak('${x.name}. This lesson is part of ${x.level}. Practise this skill carefully and repeat it until you are comfortable.')">🔊 Listen</button> <button class="btn" onclick="completeLesson('${key}',${x.index})">${done[key].includes(x.index)?'Completed':'Mark Complete'}</button></div>`).join('');
- updateProgress();
- document.getElementById('centre').scrollIntoView({behavior:'smooth'});
-}
-function completeLesson(k,i){if(!done[k].includes(i))done[k].push(i);openCourseNoScroll(k)}
-function openCourseNoScroll(k){
- current=k;const c=data[k],list=document.getElementById('lessonList');let n=0,all=[];c.levels.forEach(l=>l[1].forEach(x=>all.push({level:l[0],name:x,index:n++})));
- list.innerHTML=all.map(x=>`<div class="lesson-item"><span class="status">${done[k].includes(x.index)?'✓ Complete':'Not started'}</span><strong>${x.level}</strong>${x.name}<br><br><button class="btn alt" onclick="speak('${x.name}. Practise this skill carefully and repeat it until you are comfortable.')">🔊 Listen</button> <button class="btn" onclick="completeLesson('${k}',${x.index})">${done[k].includes(x.index)?'Completed':'Mark Complete'}</button></div>`).join('');
- updateProgress()
-}
-function updateProgress(){let total=16,p=done[current].length;document.getElementById('courseProgress').style.width=(p/total*100)+'%';document.getElementById('courseCount').innerText=p+' of '+total+' lessons completed'}
-function check(el,correct){document.getElementById('mathResult').innerText=correct?'✅ Correct! 12 − 5 = 7.':'❌ Try again. Subtract 5 from 12.'}
-function readAnswer(correct){document.getElementById('readResult').innerText=correct?'✅ Correct! The farmer is planting seeds.':'❌ Try again. Read the sentence carefully.'}
-openCourse('writing');
-</script>
-</body>
-</html>
+</body> </html>
