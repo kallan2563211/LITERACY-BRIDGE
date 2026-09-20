@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>LITERACY-BRIDGE</title>
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>LITERACY-BRIDGE | Reading Level 1</title>
 
-<style> * { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: Arial, sans-serif; background: #f4f8f4; color: #173b24; } header { background: #14532d; color: white; padding: 30px 20px; text-align: center; } header h1 { font-size: 40px; } header p { margin-top: 8px; font-size: 18px; } nav { background: #0d3b20; padding: 14px; text-align: center; position: sticky; top: 0; z-index: 100; } nav button { background: transparent; border: none; color: white; font-size: 15px; font-weight: bold; margin: 5px 10px; cursor: pointer; } nav button:hover { text-decoration: underline; } .hero { background: white; padding: 60px 20px; text-align: center; } .hero h2 { font-size: 34px; margin-bottom: 15px; } .hero p { max-width: 750px; margin: auto; font-size: 18px; } .main-button { margin-top: 25px; background: #198754; color: white; border: none; padding: 14px 25px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; } .main-button:hover { background: #146c43; } .container { max-width: 1100px; margin: auto; padding: 45px 20px; } .section-title { text-align: center; font-size: 30px; margin-bottom: 30px; } .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; } .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); } .card h3 { color: #14532d; margin-bottom: 10px; } .card p { margin-bottom: 15px; } .lesson-button { background: #198754; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; } .lesson-button:hover { background: #146c43; } .hidden { display: none; } .lesson-area { background: white; padding: 30px; border-radius: 12px; margin-top: 30px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); } .lesson-area h2 { color: #14532d; margin-bottom: 15px; } .lesson-area h3 { margin-top: 20px; margin-bottom: 10px; } .example { background: #e8f5e9; padding: 18px; border-left: 5px solid #198754; margin: 15px 0; border-radius: 5px; } .quiz { margin-top: 25px; padding: 20px; background: #f1f8f3; border-radius: 10px; } .quiz button { display: block; width: 100%; max-width: 400px; margin: 10px 0; padding: 12px; background: white; border: 2px solid #198754; border-radius: 7px; cursor: pointer; text-align: left; } .quiz button:hover { background: #e8f5e9; } .feedback { margin-top: 15px; font-weight: bold; } .progress-box { background: white; padding: 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); } .progress-bar { width: 100%; height: 20px; background: #d9e5dc; border-radius: 10px; overflow: hidden; margin-top: 12px; } .progress-fill { width: 0%; height: 100%; background: #198754; transition: width 0.5s; } footer { background: #0d3b20; color: white; text-align: center; padding: 25px; margin-top: 40px; } @media(max-width:600px) { header h1 { font-size: 30px; } .hero h2 { font-size: 27px; } nav button { display: block; margin: 8px auto; } } </style>
+<style> * { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: Arial, sans-serif; background: #f4f8f4; color: #173b24; line-height: 1.6; } header { background: #14532d; color: white; text-align: center; padding: 30px 20px; } header h1 { font-size: 38px; } header p { font-size: 18px; margin-top: 8px; } nav { background: #0d3b20; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 100; } nav button { background: transparent; border: none; color: white; font-weight: bold; cursor: pointer; margin: 5px 10px; font-size: 15px; } nav button:hover { text-decoration: underline; } .page { min-height: 500px; } .hidden { display: none !important; } .hero { background: white; text-align: center; padding: 60px 20px; } .hero h2 { font-size: 34px; margin-bottom: 15px; } .hero p { max-width: 750px; margin: auto; font-size: 18px; } .container { max-width: 1100px; margin: auto; padding: 45px 20px; } .section-title { text-align: center; font-size: 30px; margin-bottom: 30px; } .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; } .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); } .card h3 { color: #14532d; margin-bottom: 10px; } .card p { margin-bottom: 15px; } .lesson-card { position: relative; } .lesson-number { font-size: 14px; color: #198754; font-weight: bold; margin-bottom: 8px; } .main-button, .lesson-button { background: #198754; color: white; border: none; padding: 11px 18px; border-radius: 7px; font-weight: bold; cursor: pointer; } .main-button { margin-top: 25px; padding: 14px 25px; font-size: 16px; } .main-button:hover, .lesson-button:hover { background: #146c43; } .lesson-card.completed { border: 3px solid #198754; } .status { display: block; margin-top: 12px; font-weight: bold; color: #198754; } .lesson-view { background: white; border-radius: 12px; padding: 30px; margin-top: 30px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); } .lesson-view h2 { color: #14532d; margin-bottom: 15px; } .example { background: #e8f5e9; border-left: 5px solid #198754; padding: 20px; margin: 20px 0; border-radius: 6px; } .big-letters { font-size: 32px; letter-spacing: 8px; text-align: center; padding: 20px; } .activity { background: #f1f8f3; padding: 20px; margin-top: 20px; border-radius: 10px; } .activity button, .quiz-option { display: block; width: 100%; max-width: 500px; margin: 10px 0; padding: 12px; background: white; border: 2px solid #198754; border-radius: 7px; cursor: pointer; text-align: left; font-size: 15px; } .activity button:hover, .quiz-option:hover { background: #e8f5e9; } .feedback { margin-top: 15px; font-weight: bold; } .complete-button { margin-top: 20px; background: #14532d; color: white; border: none; padding: 13px 20px; border-radius: 7px; cursor: pointer; font-weight: bold; } .progress-box { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); margin-bottom: 25px; } .progress-bar { width: 100%; height: 22px; background: #d9e5dc; border-radius: 12px; overflow: hidden; margin-top: 12px; } .progress-fill { width: 0%; height: 100%; background: #198754; transition: width 0.5s; } .quiz-question { background: white; padding: 25px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); } .quiz-question h3 { margin-bottom: 15px; } .score-box { background: #e8f5e9; padding: 30px; border-radius: 12px; text-align: center; margin-top: 25px; } .certificate { border: 5px solid #14532d; background: white; padding: 40px 25px; text-align: center; margin-top: 25px; border-radius: 12px; } .certificate h2 { color: #14532d; margin-bottom: 15px; } footer { background: #0d3b20; color: white; text-align: center; padding: 25px; margin-top: 40px; } @media(max-width:600px) { header h1 { font-size: 30px; } .hero h2 { font-size: 27px; } nav button { display: block; margin: 8px auto; } .big-letters { font-size: 24px; letter-spacing: 3px; } } </style>
 
 </head>
 
@@ -10,7 +10,7 @@
 
 <header> <h1>🌉 LITERACY-BRIDGE</h1> <p>Learn • Practice • Apply • Grow</p> </header>
 
-<nav> <button onclick="showSection('home')">🏠 Home</button> <button onclick="showSection('reading')">📖 Reading</button> <button onclick="showSection('writing')">✍️ Writing</button> <button onclick="showSection('math')">🔢 Mathematics</button> <button onclick="showSection('practical')">🛠️ Practical Skills</button> <button onclick="showSection('progress')">📊 Progress</button> </nav>
+<nav> <button onclick="showPage('home')">🏠 Home</button> <button onclick="showPage('reading')">📖 Reading</button> <button onclick="showPage('writing')">✍️ Writing</button> <button onclick="showPage('math')">🔢 Mathematics</button> <button onclick="showPage('practical')">🛠️ Practical Skills</button> <button onclick="showPage('progress')">📊 Progress</button> </nav>
 
 <!-- HOME -->
 
@@ -23,25 +23,25 @@
     literacy, numeracy, creativity and practical skills.
 </p>
 
-<button class="main-button" onclick="showSection('reading')">
-    Start Learning
+<button class="main-button" onclick="showPage('reading')">
+    Start Reading Level 1
 </button>
 
 </section>
 
 <div class="container">
 
-<h2 class="section-title">What Would You Like to Learn?</h2>
+<h2 class="section-title">🌟 Learning Levels</h2>
 
 <div class="cards">
 
-<div class="card"> <h3>📖 Reading</h3> <p>Learn letters, sounds, words and sentences.</p> <button class="lesson-button" onclick="showSection('reading')"> Explore Reading </button> </div>
+<div class="card"> <h3>📖 Reading Level 1</h3> <p> Start with letters and sounds, then progress to words, sentences and a short story. </p> <button class="lesson-button" onclick="showPage('reading')"> Start Level 1 </button> </div>
 
-<div class="card"> <h3>✍️ Writing</h3> <p>Develop handwriting, spelling and sentence-writing skills.</p> <button class="lesson-button" onclick="showSection('writing')"> Explore Writing </button> </div>
+<div class="card"> <h3>✍️ Writing</h3> <p>Writing lessons will help learners develop handwriting, spelling and sentence skills.</p> <button class="lesson-button" onclick="showPage('writing')"> Explore </button> </div>
 
-<div class="card"> <h3>🔢 Mathematics</h3> <p>Practice numbers and basic mathematical operations.</p> <button class="lesson-button" onclick="showSection('math')"> Explore Mathematics </button> </div>
+<div class="card"> <h3>🔢 Mathematics</h3> <p>Build confidence with numbers and basic mathematical operations.</p> <button class="lesson-button" onclick="showPage('math')"> Explore </button> </div>
 
-<div class="card"> <h3>🛠️ Practical Skills</h3> <p>Build communication, digital, creative and problem-solving skills.</p> <button class="lesson-button" onclick="showSection('practical')"> Explore Skills </button> </div>
+<div class="card"> <h3>🛠️ Practical Skills</h3> <p>Develop useful skills for school, work and everyday life.</p> <button class="lesson-button" onclick="showPage('practical')"> Explore </button> </div>
 
 </div> </div> </div>
 
@@ -51,21 +51,49 @@
 
 <div class="container">
 
-<h2 class="section-title">📖 Reading Lessons</h2>
+<h2 class="section-title">📖 Reading Level 1</h2>
 
-<div class="cards">
+<div class="progress-box">
 
-<div class="card"> <h3>Lesson 1: Letters</h3> <p>Learn the alphabet and identify capital and small letters.</p> <button class="lesson-button" onclick="openLesson('letters')"> Start Lesson </button> </div>
+<h3>Level Progress</h3>
 
-<div class="card"> <h3>Lesson 2: Sounds</h3> <p>Learn how letters represent different sounds.</p> <button class="lesson-button" onclick="openLesson('sounds')"> Start Lesson </button> </div>
+<p> <span id="readingProgressText">0</span>% complete </p>
 
-<div class="card"> <h3>Lesson 3: Words</h3> <p>Build words from letters and sounds.</p> <button class="lesson-button" onclick="openLesson('words')"> Start Lesson </button> </div>
-
-<div class="card"> <h3>Lesson 4: Sentences</h3> <p>Learn how words combine to make sentences.</p> <button class="lesson-button" onclick="openLesson('sentences')"> Start Lesson </button> </div>
+<div class="progress-bar"> <div id="readingProgressFill" class="progress-fill"></div> </div>
 
 </div>
 
-<div id="lessonContent" class="lesson-area hidden"></div>
+<div class="cards">
+
+<div class="card lesson-card" id="card1"> <div class="lesson-number">LESSON 1</div> <h3>🔤 Alphabet</h3> <p>Learn the 26 letters of the English alphabet.</p> <button class="lesson-button" onclick="openReadingLesson(1)"> Start Lesson </button> <span class="status" id="status1"></span> </div>
+
+<div class="card lesson-card" id="card2"> <div class="lesson-number">LESSON 2</div> <h3>🔊 Letter Sounds</h3> <p>Learn the sounds represented by letters.</p> <button class="lesson-button" onclick="openReadingLesson(2)"> Start Lesson </button> <span class="status" id="status2"></span> </div>
+
+<div class="card lesson-card" id="card3"> <div class="lesson-number">LESSON 3</div> <h3>🅰️ Vowels</h3> <p>Learn the five main vowel letters.</p> <button class="lesson-button" onclick="openReadingLesson(3)"> Start Lesson </button> <span class="status" id="status3"></span> </div>
+
+<div class="card lesson-card" id="card4"> <div class="lesson-number">LESSON 4</div> <h3>🔡 Consonants</h3> <p>Identify and use consonant letters.</p> <button class="lesson-button" onclick="openReadingLesson(4)"> Start Lesson </button> <span class="status" id="status4"></span> </div>
+
+<div class="card lesson-card" id="card5"> <div class="lesson-number">LESSON 5</div> <h3>🧩 Syllables</h3> <p>Learn how words can be divided into sound units.</p> <button class="lesson-button" onclick="openReadingLesson(5)"> Start Lesson </button> <span class="status" id="status5"></span> </div>
+
+<div class="card lesson-card" id="card6"> <div class="lesson-number">LESSON 6</div> <h3>📝 Building Words</h3> <p>Combine letters and sounds to make words.</p> <button class="lesson-button" onclick="openReadingLesson(6)"> Start Lesson </button> <span class="status" id="status6"></span> </div>
+
+<div class="card lesson-card" id="card7"> <div class="lesson-number">LESSON 7</div> <h3>📖 Reading Sentences</h3> <p>Read simple sentences and understand their meaning.</p> <button class="lesson-button" onclick="openReadingLesson(7)"> Start Lesson </button> <span class="status" id="status7"></span> </div>
+
+<div class="card lesson-card" id="card8"> <div class="lesson-number">LESSON 8</div> <h3>📚 Short Story</h3> <p>Read a short story and answer questions about it.</p> <button class="lesson-button" onclick="openReadingLesson(8)"> Start Lesson </button> <span class="status" id="status8"></span> </div>
+
+</div>
+
+<div id="readingLesson" class="lesson-view hidden"></div>
+
+<div class="card" style="margin-top:30px;"> <h3>🏆 Final Reading Quiz</h3> <p> Complete the eight lessons and then test your knowledge with a 10-question quiz. </p>
+
+<button class="lesson-button" onclick="openFinalQuiz()">
+    Start Final Quiz
+</button>
+
+</div>
+
+<div id="finalQuiz" class="lesson-view hidden"></div>
 
 </div> </div>
 
@@ -75,19 +103,21 @@
 
 <div class="container">
 
-<h2 class="section-title">✍️ Writing Lessons</h2>
+<h2 class="section-title">✍️ Writing</h2>
 
 <div class="cards">
 
-<div class="card"> <h3>Handwriting</h3> <p>Practice forming letters clearly.</p> <button class="lesson-button" onclick="alert('Handwriting practice coming soon!')"> Start </button> </div>
+<div class="card"> <h3>Handwriting</h3> <p>Practice forming letters clearly and correctly.</p> </div>
 
-<div class="card"> <h3>Spelling</h3> <p>Practice writing and spelling common words.</p> <button class="lesson-button" onclick="alert('Spelling practice coming soon!')"> Start </button> </div>
+<div class="card"> <h3>Spelling</h3> <p>Learn to spell common words.</p> </div>
 
-<div class="card"> <h3>Sentences</h3> <p>Learn to construct meaningful sentences.</p> <button class="lesson-button" onclick="alert('Sentence practice coming soon!')"> Start </button> </div>
+<div class="card"> <h3>Sentences</h3> <p>Practice constructing meaningful sentences.</p> </div>
 
-<div class="card"> <h3>Paragraphs</h3> <p>Learn how to organize ideas into paragraphs.</p> <button class="lesson-button" onclick="alert('Paragraph practice coming soon!')"> Start </button> </div>
+<div class="card"> <h3>Paragraphs</h3> <p>Learn how to organize ideas into paragraphs.</p> </div>
 
-</div> </div> </div>
+</div>
+
+</div> </div>
 
 <!-- MATHEMATICS -->
 
@@ -99,23 +129,23 @@
 
 <div class="cards">
 
-<div class="card"> <h3>Numbers</h3> <p>Learn counting and number recognition.</p> <button class="lesson-button" onclick="startMathQuiz()"> Practice </button> </div>
+<div class="card"> <h3>Numbers</h3> <p>Learn counting and number recognition.</p> </div>
 
-<div class="card"> <h3>Addition</h3> <p>Practice adding numbers together.</p> <button class="lesson-button" onclick="startMathQuiz()"> Practice </button> </div>
+<div class="card"> <h3>Addition</h3> <p>Practice adding numbers.</p> </div>
 
-<div class="card"> <h3>Subtraction</h3> <p>Practice finding the difference between numbers.</p> <button class="lesson-button" onclick="startMathQuiz()"> Practice </button> </div>
+<div class="card"> <h3>Subtraction</h3> <p>Practice finding differences.</p> </div>
 
-<div class="card"> <h3>Multiplication</h3> <p>Practice multiplication.</p> <button class="lesson-button" onclick="startMathQuiz()"> Practice </button> </div>
+<div class="card"> <h3>Multiplication</h3> <p>Practice multiplication tables.</p> </div>
 
-<div class="card"> <h3>Division</h3> <p>Practice sharing numbers equally.</p> <button class="lesson-button" onclick="startMathQuiz()"> Practice </button> </div>
+<div class="card"> <h3>Division</h3> <p>Practice sharing numbers equally.</p> </div>
+
+<div class="card"> <h3>Everyday Mathematics</h3> <p>Learn about money, time and measurements.</p> </div>
 
 </div>
 
-<div id="mathQuiz" class="lesson-area hidden"></div>
-
 </div> </div>
 
-<!-- PRACTICAL SKILLS -->
+<!-- PRACTICAL -->
 
 <div id="practical" class="page hidden">
 
@@ -125,19 +155,21 @@
 
 <div class="cards">
 
-<div class="card"> <h3>Communication</h3> <p>Develop speaking, listening and teamwork skills.</p> </div>
+<div class="card"> <h3>Communication</h3> <p>Develop speaking, listening and teamwork.</p> </div>
 
-<div class="card"> <h3>Digital Skills</h3> <p>Learn useful computer, phone and internet skills.</p> </div>
+<div class="card"> <h3>Digital Skills</h3> <p>Learn useful computer and internet skills.</p> </div>
 
-<div class="card"> <h3>Problem Solving</h3> <p>Learn how to identify problems and develop solutions.</p> </div>
+<div class="card"> <h3>Problem Solving</h3> <p>Learn to identify problems and develop solutions.</p> </div>
 
-<div class="card"> <h3>Entrepreneurship</h3> <p>Learn basic business planning and money-management skills.</p> </div>
+<div class="card"> <h3>Entrepreneurship</h3> <p>Explore basic business and money-management skills.</p> </div>
 
-<div class="card"> <h3>Environmental Skills</h3> <p>Learn practical ways to care for the environment.</p> </div>
+<div class="card"> <h3>Environmental Skills</h3> <p>Learn ways to care for the environment.</p> </div>
 
-<div class="card"> <h3>Creative Skills</h3> <p>Explore creativity, art, design and making.</p> </div>
+<div class="card"> <h3>Creative Skills</h3> <p>Explore art, design and creativity.</p> </div>
 
-</div> </div> </div>
+</div>
+
+</div> </div>
 
 <!-- PROGRESS -->
 
@@ -145,24 +177,24 @@
 
 <div class="container">
 
-<h2 class="section-title">📊 Your Learning Progress</h2>
+<h2 class="section-title">📊 My Progress</h2>
 
 <div class="progress-box">
 
-<h3>Lessons Completed</h3>
+<h3>Reading Level 1</h3>
 
-<p><span id="progressText">0</span>% completed</p>
+<p> <span id="progressPageText">0</span>% completed </p>
 
-<div class="progress-bar"> <div id="progressFill" class="progress-fill"></div> </div>
+<div class="progress-bar"> <div id="progressPageFill" class="progress-fill"></div> </div>
 
 </div>
 
-<div class="card"> <h3>Keep Learning!</h3> <p> Every lesson you complete moves you one step forward. Practice regularly and build your skills. </p> </div>
+<div class="card"> <h3>Keep Going! 🌟</h3> <p> Learning is a journey. Complete each lesson, practice what you learn and check your progress regularly. </p> </div>
 
 </div> </div>
 
 <footer> <p>© 2026 LITERACY-BRIDGE</p> <p>Building knowledge, skills and confidence.</p> </footer>
 
-<script> let completedLessons = 0; function showSection(section) { let pages = document.querySelectorAll(".page"); pages.forEach(function(page) { page.classList.add("hidden"); }); document.getElementById(section).classList.remove("hidden"); window.scrollTo({ top: 0, behavior: "smooth" }); } function updateProgress() { completedLessons++; if(completedLessons > 10) { completedLessons = 10; } let percentage = completedLessons * 10; document.getElementById("progressText").innerText = percentage; document.getElementById("progressFill").style.width = percentage + "%"; } function openLesson(type) { let content = document.getElementById("lessonContent"); content.classList.remove("hidden"); if(type === "letters") { content.innerHTML = ` <h2>Lesson: Letters</h2> <p> The English alphabet has 26 letters. Letters can be written as capital letters or small letters. </p> <div class="example"> <strong>Example:</strong><br><br> A a &nbsp; B b &nbsp; C c &nbsp; D d &nbsp; E e </div> <h3>Practice Question</h3> <p>Which one is a capital letter?</p> <div class="quiz"> <button onclick="checkAnswer(this, true)">A</button> <button onclick="checkAnswer(this, false)">b</button> <button onclick="checkAnswer(this, false)">c</button> <div class="feedback"></div> </div> `; } if(type === "sounds") { content.innerHTML = ` <h2>Lesson: Letter Sounds</h2> <p> Letters represent sounds. Learning these sounds helps us read words. </p> <div class="example"> <strong>Example:</strong><br><br> B makes the sound /b/.<br> M makes the sound /m/.<br> S makes the sound /s/. </div> <h3>Practice Question</h3> <p>Which letter begins the word "sun"?</p> <div class="quiz"> <button onclick="checkAnswer(this, true)">S</button> <button onclick="checkAnswer(this, false)">B</button> <button onclick="checkAnswer(this, false)">M</button> <div class="feedback"></div> </div> `; } if(type === "words") { content.innerHTML = ` <h2>Lesson: Building Words</h2> <p> Words are made from letters. We can combine letters to create meaningful words. </p> <div class="example"> <strong>Examples:</strong><br><br> C + A + T = CAT<br> D + O + G = DOG<br> S + U + N = SUN </div> <h3>Practice Question</h3> <p>Which word is correctly formed?</p> <div class="quiz"> <button onclick="checkAnswer(this, true)">CAT</button> <button onclick="checkAnswer(this, false)">CTA</button> <button onclick="checkAnswer(this, false)">TCA</button> <div class="feedback"></div> </div> `; } if(type === "sentences") { content.innerHTML = ` <h2>Lesson: Sentences</h2> <p> A sentence expresses a complete idea. A sentence normally begins with a capital letter and ends with punctuation. </p> <div class="example"> <strong>Example:</strong><br><br> The boy is reading. </div> <h3>Practice Question</h3> <p>Which sentence is written correctly?</p> <div class="quiz"> <button onclick="checkAnswer(this, true)"> The girl is happy. </button> <button onclick="checkAnswer(this, false)"> the girl is happy </button> <button onclick="checkAnswer(this, false)"> girl The happy </button> <div class="feedback"></div> </div> `; } } function checkAnswer(button, correct) { let feedback = button.parentElement.querySelector(".feedback"); if(correct) { feedback.innerText = "✅ Correct! Well done."; updateProgress(); } else { feedback.innerText = "❌ Not quite. Try again."; } } function startMathQuiz() { let quiz = document.getElementById("mathQuiz"); quiz.classList.remove("hidden"); quiz.innerHTML = ` <h2>Mathematics Practice</h2> <p><strong>What is 5 + 3?</strong></p> <div class="quiz"> <button onclick="mathAnswer(this, false)">6</button> <button onclick="mathAnswer(this, false)">7</button> <button onclick="mathAnswer(this, true)">8</button> <button onclick="mathAnswer(this, false)">9</button> <div class="feedback"></div> </div> `; } function mathAnswer(button, correct) { let feedback = button.parentElement.querySelector(".feedback"); if(correct) { feedback.innerText = "✅ Correct! 5 + 3 = 8."; updateProgress(); } else { feedback.innerText = "❌ Try again."; } } </script>
+<script> let completed = []; function showPage(page) { document.querySelectorAll(".page").forEach(function(p) { p.classList.add("hidden"); }); document.getElementById(page).classList.remove("hidden"); window.scrollTo({ top: 0, behavior: "smooth" }); } const lessons = { 1: { title: "Lesson 1: The Alphabet", content: ` <p> The English alphabet has 26 letters. Each letter can be written as a capital letter or a small letter. </p> <div class="example big-letters"> A a &nbsp; B b &nbsp; C c &nbsp; D d &nbsp; E e<br> F f &nbsp; G g &nbsp; H h &nbsp; I i &nbsp; J j<br> K k &nbsp; L l &nbsp; M m &nbsp; N n &nbsp; O o<br> P p &nbsp; Q q &nbsp; R r &nbsp; S s &nbsp; T t<br> U u &nbsp; V v &nbsp; W w &nbsp; X x &nbsp; Y y &nbsp; Z z </div> <h3>Remember</h3> <p> Capital letters are often used at the beginning of sentences and for names. </p> <div class="activity"> <strong>Practice:</strong> <p>Which is a capital letter?</p> <button onclick="lessonAnswer(this, true)">A</button> <button onclick="lessonAnswer(this, false)">b</button> <button onclick="lessonAnswer(this, false)">c</button> <div class="feedback"></div> </div> ` }, 2: { title: "Lesson 2: Letter Sounds", content: ` <p> Letters represent sounds. Learning letter sounds helps learners connect written letters with spoken words. </p> <div class="example"> B → /b/ as in <strong>ball</strong><br> M → /m/ as in <strong>man</strong><br> S → /s/ as in <strong>sun</strong> </div> <div class="activity"> <strong>Practice:</strong> <p>Which letter begins the word "sun"?</p> <button onclick="lessonAnswer(this, true)">S</button> <button onclick="lessonAnswer(this, false)">M</button> <button onclick="lessonAnswer(this, false)">B</button> <div class="feedback"></div> </div> ` }, 3: { title: "Lesson 3: Vowels", content: ` <p> The five main vowel letters are: <strong>A, E, I, O and U.</strong> </p> <div class="example big-letters"> A &nbsp; E &nbsp; I &nbsp; O &nbsp; U </div> <p> Vowels are important parts of many English words. </p> <div class="activity"> <strong>Practice:</strong> <p>Which of these is a vowel?</p> <button onclick="lessonAnswer(this, false)">B</button> <button onclick="lessonAnswer(this, true)">E</button> <button onclick="lessonAnswer(this, false)">T</button> <div class="feedback"></div> </div> ` }, 4: { title: "Lesson 4: Consonants", content: ` <p> Consonants are the letters of the alphabet other than the five main vowel letters. </p> <div class="example"> Examples: B, C, D, F, G, H, J, K, L, M </div> <div class="activity"> <strong>Practice:</strong> <p>Which one is a consonant?</p> <button onclick="lessonAnswer(this, false)">A</button> <button onclick="lessonAnswer(this, true)">M</button> <button onclick="lessonAnswer(this, false)">E</button> <div class="feedback"></div> </div> ` }, 5: { title: "Lesson 5: Syllables", content: ` <p> A syllable is a part of a word that contains a spoken sound or beat. </p> <div class="example"> Examples:<br><br> cat → 1 syllable<br> table → ta-ble → 2 syllables<br> banana → ba-na-na → 3 syllables </div> <div class="activity"> <strong>Practice:</strong> <p>How many syllables are in "banana"?</p> <button onclick="lessonAnswer(this, false)">1</button> <button onclick="lessonAnswer(this, false)">2</button> <button onclick="lessonAnswer(this, true)">3</button> <div class="feedback"></div> </div> ` }, 6: { title: "Lesson 6: Building Words", content: ` <p> Words can be built by putting letters together in the correct order. </p> <div class="example"> C + A + T = CAT<br><br> D + O + G = DOG<br><br> S + U + N = SUN </div> <div class="activity"> <strong>Practice:</strong> <p>Which word is made from C + A + T?</p> <button onclick="lessonAnswer(this, true)">CAT</button> <button onclick="lessonAnswer(this, false)">CTA</button> <button onclick="lessonAnswer(this, false)">TCA</button> <div class="feedback"></div> </div> ` }, 7: { title: "Lesson 7: Reading Sentences", content: ` <p> A sentence expresses a complete idea. It normally begins with a capital letter and ends with punctuation. </p> <div class="example"> <strong>The boy is reading.</strong><br><br> <strong>The girl is happy.</strong> </div> <div class="activity"> <strong>Practice:</strong> <p>Which sentence is written correctly?</p> <button onclick="lessonAnswer(this, true)"> The boy is reading. </button> <button onclick="lessonAnswer(this, false)"> the boy is reading </button> <button onclick="lessonAnswer(this, false)"> boy The reading </button> <div class="feedback"></div> </div> ` }, 8: { title: "Lesson 8: Short Story", content: ` <h3>The Little Seed</h3> <div class="example"> A little seed was planted in the soil. Rain fell on the ground and the seed began to grow. Soon, a small green plant appeared. The plant received sunlight and water every day. With time, it became a healthy young plant. </div> <h3>Reading Question</h3> <p>What was planted in the soil?</p> <div class="activity"> <button onclick="lessonAnswer(this, true)"> A little seed </button> <button onclick="lessonAnswer(this, false)"> A stone </button> <button onclick="lessonAnswer(this, false)"> A book </button> <div class="feedback"></div> </div> ` } }; function openReadingLesson(number) { let area = document.getElementById("readingLesson"); area.classList.remove("hidden"); area.innerHTML = ` <h2>${lessons[number].title}</h2> ${lessons[number].content} <button class="complete-button" onclick="completeLesson(${number})"> ✅ Mark Lesson Complete </button> `; area.scrollIntoView({ behavior: "smooth", block: "start" }); } function lessonAnswer(button, correct) { let feedback = button.parentElement.querySelector(".feedback"); if(correct) { feedback.innerText = "✅ Correct! Great work."; } else { feedback.innerText = "❌ Try again."; } } function completeLesson(number) { if(!completed.includes(number)) { completed.push(number); } document.getElementById("status" + number).innerText = "✅ Completed"; document.getElementById("card" + number) .classList.add("completed"); updateProgress(); alert("Lesson completed! Keep going. 🌟"); } function updateProgress() { let percentage = Math.round( (completed.length / 8) * 100 ); document.getElementById("readingProgressText") .innerText = percentage; document.getElementById("readingProgressFill") .style.width = percentage + "%"; document.getElementById("progressPageText") .innerText = percentage; document.getElementById("progressPageFill") .style.width = percentage + "%"; } const quizQuestions = [ { question: "How many letters are in the English alphabet?", options: ["20", "24", "26", "30"], answer: 2 }, { question: "Which one is a vowel?", options: ["B", "E", "T", "M"], answer: 1 }, { question: "Which letter begins the word 'sun'?", options: ["M", "S", "B", "D"], answer: 1 }, { question: "Which one is a consonant?", options: ["A", "E", "M", "O"], answer: 2 }, { question: "How many syllables are in 'banana'?", options: ["1", "2", "3", "4"], answer: 2 }, { question: "Which word is correctly formed from C + A + T?", options: ["CTA", "CAT", "TCA", "ACT"], answer: 1 }, { question: "Which sentence is written correctly?", options: [ "the boy is reading", "boy The reading", "The boy is reading.", "the Boy reading" ], answer: 2 }, { question: "What was planted in the soil in the short story?", options: [ "A stone", "A little seed", "A book", "A toy" ], answer: 1 }, { question: "Which group contains only vowels?", options: [ "A E I O U", "B C D E F", "A B C D E", "M N O P Q" ], answer: 0 }, { question: "What helps a young plant grow?", options: [ "Sunlight and water", "Only stones", "Books", "Darkness" ], answer: 0 } ]; function openFinalQuiz() { let area = document.getElementById("finalQuiz"); area.classList.remove("hidden"); let html = ` <h2>🏆 Reading Level 1 Final Quiz</h2> <p> Answer all 10 questions. Your score will appear at the end. </p> `; quizQuestions.forEach(function(q, index) { html += ` <div class="quiz-question"> <h3> ${index + 1}. ${q.question} </h3> `; q.options.forEach(function(option, optionIndex) { html += ` <button class="quiz-option" onclick="selectQuizAnswer( ${index}, ${optionIndex}, this )"> ${option} </button> `; }); html += ` <div id="quizFeedback${index}" class="feedback"></div> </div> `; }); html += ` <button class="main-button" onclick="finishQuiz()"> Submit Quiz </button> <div id="quizResult"></div> `; area.innerHTML = html; area.scrollIntoView({ behavior: "smooth", block: "start" }); } let quizAnswers = []; function selectQuizAnswer(question, answer, button) { quizAnswers[question] = answer; let buttons = button.parentElement.querySelectorAll(".quiz-option"); buttons.forEach(function(b) { b.style.background = "white"; }); button.style.background = "#e8f5e9"; } function finishQuiz() { if(quizAnswers.length < quizQuestions.length) { alert( "Please answer all 10 questions before submitting." ); return; } let score = 0; quizQuestions.forEach(function(q, index) { let feedback = document.getElementById("quizFeedback" + index); if(quizAnswers[index] === q.answer) { score++; feedback.innerText = "✅ Correct"; } else { feedback.innerText = "❌ Incorrect"; } }); let percentage = score * 10; let result = document.getElementById("quizResult"); if(score >= 7) { result.innerHTML = ` <div class="score-box"> <h2>🎉 Congratulations!</h2> <p> You scored <strong>${score}/10</strong> (${percentage}%). </p> <p> You have completed the Reading Level 1 final quiz. </p> <div class="certificate"> <h2>🏆 LITERACY-BRIDGE</h2> <p> Certificate of Completion </p> <br> <p> This learner has completed <strong>Reading Level 1</strong>. </p> <br> <p> Score: <strong>${score}/10</strong> </p> </div> </div> `; } else { result.innerHTML = ` <div class="score-box"> <h2>📚 Keep Practicing!</h2> <p> You scored <strong>${score}/10</strong> (${percentage}%). </p> <p> Review the lessons and try the quiz again. </p> </div> `; } window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }); } </script>
 
 </body> </html>
