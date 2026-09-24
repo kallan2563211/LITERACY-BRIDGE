@@ -1,1 +1,517 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>LITERACY-BRIDGE</title><style>body{font-family:Arial;margin:0;background:#f3f7f4}header{background:#087443;color:#fff;padding:20px;text-align:center}.container{max-width:900px;margin:auto;padding:20px}.card{background:#fff;padding:20px;border-radius:12px;margin:15px 0;box-shadow:0 2px 8px #0002}button{background:#087443;color:#fff;border:0;padding:10px 16px;border-radius:6px}.lesson{display:none}</style></head><body><header><h1>📚 LITERACY-BRIDGE</h1><p>Learn • Practice • Apply • Grow</p></header><div class='container'><div class='card'><h2>Welcome</h2><p>This is the starter upgraded LITERACY-BRIDGE website.</p><button onclick="document.getElementById('l1').style.display='block'">Start Reading</button></div><div id='l1' class='card lesson'><h2>Lesson 1: Alphabet</h2><p>The English alphabet has 26 letters.</p><p><b>Practice:</b> Which is a capital letter?</p><button onclick="alert('Correct!')">A</button><button onclick="alert('Try again')">b</button></div><div class='card'><h2>Reading Lessons</h2><ul><li>Alphabet</li><li>Letter Sounds</li><li>Vowels</li><li>Consonants</li><li>Syllables</li><li>Words</li><li>Sentences</li><li>Story</li></ul></div><div class='card'><h2>Writing Lessons</h2><ul><li>Handwriting</li><li>Capital Letters</li><li>Letter Formation</li><li>Words</li><li>Spelling</li><li>Sentences</li><li>Punctuation</li><li>Paragraphs</li></ul></div><div class='card'><h2>Mathematics Lessons</h2><ul><li>Numbers</li><li>Addition</li><li>Subtraction</li><li>Multiplication</li><li>Division</li><li>Fractions</li><li>Money</li><li>Time</li></ul></div><div class='card'><h2>Practical Skills</h2><ul><li>Communication</li><li>Digital Skills</li><li>Problem Solving</li><li>Entrepreneurship</li><li>Environmental Skills</li><li>Creativity</li></ul></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LITERACY-BRIDGE | Learn • Practice • Apply • Grow</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f8f5;
+      color: #17301f;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #14532d;
+      color: white;
+      padding: 18px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #9be7b2;
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: 35px auto;
+      padding: 55px 7%;
+      background: linear-gradient(135deg, #dff3e6, white);
+      border-radius: 25px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: #14532d;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .tagline {
+      color: #198754;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #607267;
+      font-size: 1.05rem;
+    }
+
+    .hero-art {
+      background: #14532d;
+      border-radius: 25px;
+      min-height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 20px 6% 50px;
+    }
+
+    .section-title {
+      margin: 35px 0 20px;
+    }
+
+    .section-title h2 {
+      color: #14532d;
+      margin-bottom: 5px;
+    }
+
+    .section-title p {
+      color: #607267;
+    }
+
+    .academies {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dce9e1;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 25px rgba(20, 83, 45, 0.08);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #14532d;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #607267;
+    }
+
+    .lessons {
+      margin: 15px 0 0 18px;
+      color: #607267;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      background: #198754;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #14532d;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      text-align: center;
+    }
+
+    footer {
+      background: #0d3b20;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .academies,
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .academies,
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="navbar">
+
+    <div class="logo">
+      📚 LITERACY-BRIDGE
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#academies">Academies</a>
+      <a href="#about">About</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main id="home">
+
+  <section class="hero">
+
+    <div>
+
+      <div class="tagline">
+        LEARN • PRACTICE • APPLY • GROW
+      </div>
+
+      <h1>
+        Build Knowledge.<br>
+        Build Skills.<br>
+        Build Your Future.
+      </h1>
+
+      <p>
+        LITERACY-BRIDGE is a learning platform designed to help
+        learners develop literacy, numeracy, creativity and practical
+        skills through simple lessons, activities and practice.
+      </p>
+
+      <a href="#academies" class="btn">
+        🚀 Start Learning
+      </a>
+
+    </div>
+
+
+    <div class="hero-art">
+      📖 ✏️ 🔢 🌱
+    </div>
+
+  </section>
+
+
+  <div class="container">
+
+    <section id="academies">
+
+      <div class="section-title">
+
+        <h2>🎓 Learning Academies</h2>
+
+        <p>
+          Choose an academy and begin your learning journey.
+        </p>
+
+      </div>
+
+
+      <div class="academies">
+
+
+        <!-- READING -->
+
+        <div class="card">
+
+          <div class="icon">📖</div>
+
+          <h3>Reading Academy</h3>
+
+          <p>
+            Build reading skills from letters and sounds
+            to sentences and stories.
+          </p>
+
+          <ul class="lessons">
+
+            <li>Alphabet</li>
+            <li>Letter Sounds</li>
+            <li>Vowels</li>
+            <li>Consonants</li>
+            <li>Syllables</li>
+            <li>Words</li>
+            <li>Sentences</li>
+            <li>Stories</li>
+
+          </ul>
+
+          <a href="reading.html" class="btn">
+            Start Reading
+          </a>
+
+        </div>
+
+
+        <!-- WRITING -->
+
+        <div class="card">
+
+          <div class="icon">✍️</div>
+
+          <h3>Writing Academy</h3>
+
+          <p>
+            Develop handwriting, spelling,
+            sentence and paragraph skills.
+          </p>
+
+          <ul class="lessons">
+
+            <li>Handwriting</li>
+            <li>Capital Letters</li>
+            <li>Letter Formation</li>
+            <li>Words</li>
+            <li>Spelling</li>
+            <li>Sentences</li>
+            <li>Punctuation</li>
+            <li>Paragraphs</li>
+
+          </ul>
+
+          <a href="writing.html" class="btn">
+            Start Writing
+          </a>
+
+        </div>
+
+
+        <!-- MATHEMATICS -->
+
+        <div class="card">
+
+          <div class="icon">🔢</div>
+
+          <h3>Mathematics Academy</h3>
+
+          <p>
+            Learn basic mathematics and
+            apply numbers to everyday life.
+          </p>
+
+          <ul class="lessons">
+
+            <li>Numbers</li>
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+            <li>Fractions</li>
+            <li>Money</li>
+            <li>Time</li>
+
+          </ul>
+
+          <a href="mathematics.html" class="btn">
+            Start Mathematics
+          </a>
+
+        </div>
+
+
+        <!-- PRACTICAL SKILLS -->
+
+        <div class="card">
+
+          <div class="icon">🛠️</div>
+
+          <h3>Practical Skills</h3>
+
+          <p>
+            Learn useful skills for school,
+            community and everyday life.
+          </p>
+
+          <ul class="lessons">
+
+            <li>Communication</li>
+            <li>Digital Skills</li>
+            <li>Problem Solving</li>
+            <li>Entrepreneurship</li>
+            <li>Environment</li>
+            <li>Creativity</li>
+            <li>Health & Hygiene</li>
+            <li>Agriculture</li>
+
+          </ul>
+
+          <a href="practical-skills.html" class="btn">
+            Start Skills
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section id="about">
+
+      <div class="section-title">
+
+        <h2>🌟 What LITERACY-BRIDGE Helps You Build</h2>
+
+      </div>
+
+
+      <div class="features">
+
+
+        <div class="card feature">
+
+          <div class="icon">🧠</div>
+
+          <h3>Knowledge</h3>
+
+          <p>
+            Understand new ideas through simple lessons.
+          </p>
+
+        </div>
+
+
+        <div class="card feature">
+
+          <div class="icon">🎯</div>
+
+          <h3>Practice</h3>
+
+          <p>
+            Test your understanding through activities.
+          </p>
+
+        </div>
+
+
+        <div class="card feature">
+
+          <div class="icon">💡</div>
+
+          <h3>Creativity</h3>
+
+          <p>
+            Develop ideas and find useful solutions.
+          </p>
+
+        </div>
+
+
+        <div class="card feature">
+
+          <div class="icon">🌍</div>
+
+          <h3>Real-Life Skills</h3>
+
+          <p>
+            Apply what you learn at school and in your community.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <h3>📚 LITERACY-BRIDGE</h3>
+
+  <p>
+    Building knowledge, skills and confidence.
+  </p>
+
+  <p>
+    Learn • Practice • Apply • Grow
+  </p>
+
+</footer>
+
+</body>
+</html>
